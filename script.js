@@ -1,19 +1,15 @@
-/* Malla Académica — UNViMe
-   Las correlatividades se modelan como requisitos explícitos por categoría.
-   Los datos dudosos o ausentes se señalan; no deben interpretarse como confirmación oficial. */
+/* Malla Académica — UNViMe */
 "use strict";
 
 const subjects = [
-  // INGRESO: la relación de Matemática con Introducción al Análisis Matemático fue indicada por el usuario;
-  // el PDF cargado no incluye estas tres materias ni precisa la condición formal del requisito.
-  { id:"ing-matematica", nombre:"Matemática", alias:["Ingreso Matemático","Matematica de ingreso"], anio:"Ingreso", periodo:"Ingreso", codigo:"", correlativasCursado:[], correlativasFinal:[], notas:["El documento de correlativas cargado no detalla las condiciones de las materias del ingreso. El usuario indicó que Ingreso Matemático es necesario para cursar Introducción al Análisis Matemático; la condición exacta debe confirmarse."] },
-  { id:"ing-vida-universitaria", nombre:"Vida Universitaria", alias:["Vida universitaria de ingreso"], anio:"Ingreso", periodo:"Ingreso", codigo:"", correlativasCursado:[], correlativasFinal:[], notas:["Correlatividades de ingreso no detalladas en el documento proporcionado."] },
-  { id:"ing-comprension-texto", nombre:"Comprensión de Texto", alias:["Comprension de texto","Comprensión de texto de ingreso"], anio:"Ingreso", periodo:"Ingreso", codigo:"", correlativasCursado:[], correlativasFinal:[], notas:["Correlatividades de ingreso no detalladas en el documento proporcionado."] },
+  { id:"ing-matematica", nombre:"Matemática", alias:["Ingreso Matemático","Matematica de ingreso"], anio:"Ingreso", periodo:"Ingreso", codigo:"", correlativasCursado:[], correlativasFinal:[] },
+  { id:"ing-vida-universitaria", nombre:"Vida Universitaria", alias:["Vida universitaria de ingreso"], anio:"Ingreso", periodo:"Ingreso", codigo:"", correlativasCursado:[], correlativasFinal:[] },
+  { id:"ing-comprension-texto", nombre:"Comprensión de Texto", alias:["Comprension de texto","Comprensión de texto de ingreso"], anio:"Ingreso", periodo:"Ingreso", codigo:"", correlativasCursado:[], correlativasFinal:[] },
 
   // PRIMER AÑO
   { id:"mat-discreta", nombre:"Matemática Discreta", anio:"Primer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasFinal:[] },
-  { id:"intro-analisis", nombre:"Introducción al Análisis Matemático", alias:["Análisis Matemático","Introduccion al Analisis Matematico"], anio:"Primer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasIngreso:[{id:"ing-matematica",tipo:"ingreso"}], correlativasFinal:[], notas:["La correlatividad con Matemática del ingreso fue indicada por el usuario."] },
-  { id:"intro-programacion", nombre:"Introducción a la Programación", anio:"Primer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasIngreso:[{id:"ing-comprension-texto",tipo:"ingreso"}], correlativasFinal:[], notas:["La correlatividad con Comprensión de Texto del ingreso fue indicada por el usuario."] },
+  { id:"intro-analisis", nombre:"Introducción al Análisis Matemático", alias:["Análisis Matemático","Introduccion al Analisis Matematico"], anio:"Primer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasIngreso:[{id:"ing-matematica",tipo:"ingreso"}], correlativasFinal:[] },
+  { id:"intro-programacion", nombre:"Introducción a la Programación", anio:"Primer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasIngreso:[{id:"ing-comprension-texto",tipo:"ingreso"}], correlativasFinal:[] },
   { id:"quimica", nombre:"Química", anio:"Primer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasFinal:[] },
 
   { id:"algebra-lineal", nombre:"Álgebra Lineal y Geometría Analítica", anio:"Primer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"mat-discreta",tipo:"regular"}], correlativasFinal:[{id:"mat-discreta",tipo:"final"}] },
@@ -32,11 +28,11 @@ const subjects = [
   { id:"paradigmas", nombre:"Paradigmas de Programación", anio:"Segundo año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"algoritmos-ii",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-i",tipo:"aprobada"},{id:"algoritmos-ii",tipo:"final"}] },
   { id:"sistemas-info-ii", nombre:"Sistemas de Información II", anio:"Segundo año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"sistemas-info-i",tipo:"regular"}], correlativasFinal:[{id:"intro-programacion",tipo:"aprobada"},{id:"sistemas-info-i",tipo:"final"}] },
   { id:"probabilidad", nombre:"Probabilidad y Estadística", anio:"Segundo año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"calculo-ii",tipo:"regular"}], correlativasFinal:[{id:"algebra-lineal",tipo:"aprobada"},{id:"calculo-i",tipo:"aprobada"},{id:"calculo-ii",tipo:"final"}] },
-  { id:"bases-datos", nombre:"Bases de Datos", anio:"Segundo año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"algoritmos-ii",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-i",tipo:"aprobada"},{id:"algoritmos-ii",tipo:"final"}], notas:["La página 8 del documento advierte que algunas celdas de correlativas para rendir estaban tapadas; conviene confirmar esta condición con el plan oficial."] },
+  { id:"bases-datos", nombre:"Bases de Datos", anio:"Segundo año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"algoritmos-ii",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-i",tipo:"aprobada"},{id:"algoritmos-ii",tipo:"final"}] },
 
   // TERCER AÑO
-  { id:"ing-software-i", nombre:"Ingeniería de Software I", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"sistemas-info-ii",tipo:"regular"},{id:"bases-datos",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-ii",tipo:"aprobada"},{id:"sistemas-info-ii",tipo:"final"},{id:"bases-datos",tipo:"final"}], notas:["La condición de Bases de Datos para rendir debe confirmarse porque el documento señala una celda parcialmente tapada."] },
-  { id:"sistemas-operativos", nombre:"Sistemas Operativos", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"algoritmos-ii",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-i",tipo:"aprobada"},{id:"arquitectura",tipo:"aprobada"},{id:"algoritmos-ii",tipo:"final"}], notas:["El documento señala que algunas celdas de correlativas para rendir estaban tapadas; confirmar con el plan oficial."] },
+  { id:"ing-software-i", nombre:"Ingeniería de Software I", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"sistemas-info-ii",tipo:"regular"},{id:"bases-datos",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-ii",tipo:"aprobada"},{id:"sistemas-info-ii",tipo:"final"},{id:"bases-datos",tipo:"final"}] },
+  { id:"sistemas-operativos", nombre:"Sistemas Operativos", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"algoritmos-ii",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-i",tipo:"aprobada"},{id:"arquitectura",tipo:"aprobada"},{id:"algoritmos-ii",tipo:"final"}] },
   { id:"redes", nombre:"Redes", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"paradigmas",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-ii",tipo:"aprobada"},{id:"paradigmas",tipo:"final"}] },
 
   { id:"organizacion-empresarial", nombre:"Organización Empresarial", anio:"Tercer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"sistemas-info-ii",tipo:"regular"},{id:"probabilidad",tipo:"regular"}], correlativasFinal:[{id:"calculo-ii",tipo:"aprobada"},{id:"sistemas-info-i",tipo:"aprobada"},{id:"sistemas-info-ii",tipo:"final"},{id:"probabilidad",tipo:"final"}] },
@@ -87,8 +83,6 @@ const subjects = [
   { id:"opt-sig", nombre:"Sistemas de Información Geográfica", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"analisis-algoritmos",tipo:"aprobada"},{id:"gestion-ambiental",tipo:"aprobada"}] },
   { id:"opt-gestion-procesos", nombre:"Gestión de Procesos", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"organizacion-empresarial",tipo:"aprobada"},{id:"ing-software-ii",tipo:"aprobada"}] },
 
-  // ESPACIOS PARA COMPLETAR MANUALMENTE: ubicar en el año/cuatrimestre correcto.
-  // Física III ya aparece como requisito de Gestión Ambiental en el documento aportado.
   { id:"fisica-iii", nombre:"Física III", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"fisica-ii",tipo:"regular"}], correlativasFinal:[{id:"quimica",tipo:"aprobada"},{id:"fisica-i",tipo:"aprobada"}, {id:"fisica-ii",tipo:"final"}] },
   { id:"ingles", nombre:"Inglés", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasFinal:[] }
 ];

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B1120">
+  <title>Malla Académica | Ingeniería en Sistemas de Información</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-mark" aria-hidden="true">M</div>
+    <div class="brand-copy">
+      <p class="eyebrow">UNViMe · Plan de estudios</p>
+      <h1>Malla Académica</h1>
+      <p class="subtitle">Ingeniería en Sistemas de Información</p>
+    </div>
+    <div class="header-actions">
+      <a id="official-plan-link" class="text-link" href="#fuentes">Fuente del plan</a>
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+        <span id="theme-icon" aria-hidden="true">☼</span><span id="theme-label">Tema claro</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <section class="intro-row">
+      <div>
+        <p class="eyebrow">Resolución R. N.º 000051/2018</p>
+        <h2>Explorá las correlatividades</h2>
+        <p class="muted">Consultá qué necesitás para cursar o rendir, y seguí las relaciones entre materias.</p>
+      </div>
+      <div class="source-status">
+        <span class="status-dot"></span>
+        <span>Datos basados en el documento cargado</span>
+      </div>
+    </section>
+
+    <section class="search-panel" aria-label="Búsqueda global">
+      <label class="search-box" for="global-search">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="global-search" type="search" placeholder="Buscar materia, alias o código…" autocomplete="off">
+        <button id="clear-search" type="button" class="clear-search" aria-label="Limpiar búsqueda" hidden>×</button>
+      </label>
+      <p class="search-hint">La búsqueda incluye el ingreso, todos los años y las optativas.</p>
+      <div id="search-results" class="search-results" hidden></div>
+    </section>
+
+    <nav id="year-tabs" class="year-tabs" aria-label="Secciones de la malla"></nav>
+
+    <section class="content-grid">
+      <div class="main-column">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" id="section-eyebrow">SECCIÓN</p>
+            <h2 id="section-title">Ingreso</h2>
+          </div>
+          <span id="subject-count" class="count-pill">0 materias</span>
+        </div>
+        <div id="data-notice" class="notice" hidden></div>
+        <div id="subject-list" class="subject-list"></div>
+      </div>
+
+      <aside class="side-column">
+        <section class="side-card">
+          <p class="eyebrow">GUÍA RÁPIDA</p>
+          <h3>Cómo leer las condiciones</h3>
+          <div class="legend-item"><span class="legend-swatch regular"></span><div><strong>Regular para cursar</strong><p>La cursada previa debe estar regularizada.</p></div></div>
+          <div class="legend-item"><span class="legend-swatch approved"></span><div><strong>Aprobada para cursar</strong><p>El final previo debe estar aprobado.</p></div></div>
+          <div class="legend-item"><span class="legend-swatch final"></span><div><strong>Aprobada para rendir</strong><p>Requisito para rendir el final de la materia.</p></div></div>
+          <div class="legend-item"><span class="legend-swatch pending"></span><div><strong>Condición pendiente</strong><p>La relación está indicada, pero falta confirmar la condición exacta.</p></div></div>
+        </section>
+        <section class="side-card">
+          <p class="eyebrow">RECORRIDO</p>
+          <h3>Mapa de correlatividades</h3>
+          <p class="muted">Abrí una materia y elegí “Ver recorrido” para visualizar sus requisitos y las materias que dependen de ella.</p>
+          <div class="mini-flow" aria-hidden="true"><span>Requisitos</span><i>→</i><span class="mini-flow-focus">Materia</span><i>→</i><span>Dependientes</span></div>
+        </section>
+        <section class="side-card source-card" id="fuentes">
+          <p class="eyebrow">FUENTES Y ALCANCE</p>
+          <h3>Datos académicos</h3>
+          <p>Documento proporcionado: <strong>Correlativas – Ingeniería en Sistemas de Información (UNViMe)</strong>, basado en la Resolución R. N.º 000051/2018.</p>
+          <p class="muted">Última verificación: 11/10/2026.</p>
+          <p class="small-note">Esta herramienta es de consulta y no registra progreso académico.</p>
+        </section>
+      </aside>
+    </section>
+
+    <section id="graph-view" class="graph-view" hidden>
+      <div class="graph-header">
+        <div>
+          <p class="eyebrow">VISTA DE RECORRIDO</p>
+          <h2 id="graph-title">Correlatividades</h2>
+          <p id="graph-description" class="muted">Requisitos y materias dependientes.</p>
+        </div>
+        <button id="back-to-grid" class="secondary-button" type="button">← Volver a la malla</button>
+      </div>
+      <div class="graph-legend">
+        <span><i class="line-sample regular-line"></i> Regular para cursar</span>
+        <span><i class="line-sample approved-line"></i> Aprobada para cursar</span>
+        <span><i class="line-sample final-line"></i> Aprobada para rendir</span>
+        <span><i class="line-sample pending-line"></i> Condición por confirmar</span>
+      </div>
+      <div id="graph-canvas" class="graph-canvas"></div>
+      <p class="graph-footnote">Las flechas apuntan desde el requisito hacia la materia que lo necesita. En el mapa se muestra el primer nivel de relaciones; abrí los nodos para seguir navegando.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Malla Académica · Ingeniería en Sistemas de Información</span>
+    <span>Desarrollado por Santiago Vargas.</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

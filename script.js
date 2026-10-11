@@ -243,8 +243,7 @@ function renderSubjects() {
   el("section-title").textContent = sectionLabel(state.section);
   el("subject-count").textContent = `${list.length} ${list.length === 1 ? "materia" : "materias"}`;
   const notes = state.section === "Ingreso"
-    ? "Se cargaron las dos relaciones de ingreso indicadas: Matemática → Introducción al Análisis Matemático y Comprensión de Texto → Introducción a la Programación. Vida Universitaria no tiene relaciones con materias de la carrera registradas."
-    : "";
+    
   el("data-notice").hidden = !notes;
   el("data-notice").textContent = notes;
   el("subject-list").innerHTML = list.length ? list.map(cardHTML).join("") : `<div class="empty-state">No hay materias cargadas en esta sección.</div>`;

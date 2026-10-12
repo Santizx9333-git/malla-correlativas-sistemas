@@ -15,7 +15,7 @@ const subjects = [
   { id:"algebra-lineal", codigo:"35-05", nombre:"Álgebra Lineal y Geometría Analítica", anio:"Primer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"mat-discreta",tipo:"regular"}], correlativasFinal:[{id:"mat-discreta",tipo:"final"}] },
   { id:"calculo-i", codigo:"35-06", nombre:"Cálculo I", anio:"Primer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"intro-analisis",tipo:"regular"}], correlativasFinal:[{id:"intro-analisis",tipo:"final"}] },
   { id:"algoritmos-i", codigo:"35-07", nombre:"Algoritmos y Estructuras de Datos I", anio:"Primer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"intro-programacion",tipo:"regular"}], correlativasFinal:[{id:"intro-programacion",tipo:"final"}] },
-  { id:"arquitectura", codigo:"35-08", nombre:"Arquitectura de Computadoras", anio:"Primer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"intro-programacion",tipo:"regular"}], correlativasFinal:[{id:"intro-programacion",tipo:"final"}] },
+  { id:"arquitectura", codigo:"35-08", nombre:"Arquitectura de Computadoras", anio:"Primer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"intro-programacion",tipo:"regular"}], correlativasIngreso:[{id: "ing-vida-universitaria", tipo:"ingreso"}], correlativasFinal:[{id:"intro-programacion",tipo:"final"}] },
 
   // SEGUNDO AÑO
   { id:"calculo-ii", codigo:"35-09", nombre:"Cálculo II", anio:"Segundo año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"algebra-lineal",tipo:"regular"},{id:"calculo-i",tipo:"regular"}], correlativasFinal:[{id:"algebra-lineal",tipo:"final"},{id:"calculo-i",tipo:"final"}] },

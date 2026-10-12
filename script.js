@@ -7,84 +7,84 @@ const subjects = [
   { id:"ing-comprension-texto", nombre:"Comprensión de Texto", alias:["Comprension de texto","Comprensión de texto de ingreso"], anio:"Ingreso", periodo:"Ingreso", codigo:"", correlativasCursado:[], correlativasFinal:[] },
 
   // PRIMER AÑO
-  { id:"mat-discreta", nombre:"Matemática Discreta", anio:"Primer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasFinal:[] },
-  { id:"intro-analisis", nombre:"Introducción al Análisis Matemático", alias:["Análisis Matemático","Introduccion al Analisis Matematico"], anio:"Primer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasIngreso:[{id:"ing-matematica",tipo:"ingreso"}], correlativasFinal:[] },
-  { id:"intro-programacion", nombre:"Introducción a la Programación", anio:"Primer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasIngreso:[{id:"ing-comprension-texto",tipo:"ingreso"}], correlativasFinal:[] },
-  { id:"quimica", nombre:"Química", anio:"Primer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasFinal:[] },
+  { id:"mat-discreta", codigo:"35-01", nombre:"Matemática Discreta", anio:"Primer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasFinal:[] },
+  { id:"intro-analisis", codigo:"35-02", nombre:"Introducción al Análisis Matemático", alias:["Análisis Matemático","Introduccion al Analisis Matematico"], anio:"Primer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasIngreso:[{id:"ing-matematica",tipo:"ingreso"}], correlativasFinal:[] },
+  { id:"intro-programacion", codigo:"35-03", nombre:"Introducción a la Programación", anio:"Primer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasIngreso:[{id:"ing-comprension-texto",tipo:"ingreso"}], correlativasFinal:[] },
+  { id:"quimica", codigo:"35-04", nombre:"Química", anio:"Primer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasFinal:[] },
 
-  { id:"algebra-lineal", nombre:"Álgebra Lineal y Geometría Analítica", anio:"Primer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"mat-discreta",tipo:"regular"}], correlativasFinal:[{id:"mat-discreta",tipo:"final"}] },
-  { id:"calculo-i", nombre:"Cálculo I", anio:"Primer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"intro-analisis",tipo:"regular"}], correlativasFinal:[{id:"intro-analisis",tipo:"final"}] },
-  { id:"algoritmos-i", nombre:"Algoritmos y Estructuras de Datos I", anio:"Primer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"intro-programacion",tipo:"regular"}], correlativasFinal:[{id:"intro-programacion",tipo:"final"}] },
-  { id:"arquitectura", nombre:"Arquitectura de Computadoras", anio:"Primer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"intro-programacion",tipo:"regular"}], correlativasFinal:[{id:"intro-programacion",tipo:"final"}] },
+  { id:"algebra-lineal", codigo:"35-05", nombre:"Álgebra Lineal y Geometría Analítica", anio:"Primer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"mat-discreta",tipo:"regular"}], correlativasFinal:[{id:"mat-discreta",tipo:"final"}] },
+  { id:"calculo-i", codigo:"35-06", nombre:"Cálculo I", anio:"Primer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"intro-analisis",tipo:"regular"}], correlativasFinal:[{id:"intro-analisis",tipo:"final"}] },
+  { id:"algoritmos-i", codigo:"35-07", nombre:"Algoritmos y Estructuras de Datos I", anio:"Primer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"intro-programacion",tipo:"regular"}], correlativasFinal:[{id:"intro-programacion",tipo:"final"}] },
+  { id:"arquitectura", codigo:"35-08", nombre:"Arquitectura de Computadoras", anio:"Primer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"intro-programacion",tipo:"regular"}], correlativasFinal:[{id:"intro-programacion",tipo:"final"}] },
 
   // SEGUNDO AÑO
-  { id:"calculo-ii", nombre:"Cálculo II", anio:"Segundo año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"algebra-lineal",tipo:"regular"},{id:"calculo-i",tipo:"regular"}], correlativasFinal:[{id:"algebra-lineal",tipo:"final"},{id:"calculo-i",tipo:"final"}] },
-  { id:"fisica-i", nombre:"Física I", anio:"Segundo año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"intro-analisis",tipo:"regular"}], correlativasFinal:[{id:"intro-analisis",tipo:"final"}] },
-  { id:"algoritmos-ii", nombre:"Algoritmos y Estructuras de Datos II", anio:"Segundo año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"algoritmos-i",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-i",tipo:"final"}] },
-  { id:"sistemas-info-i", nombre:"Sistemas de Información I", anio:"Segundo año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"intro-programacion",tipo:"regular"}], correlativasFinal:[{id:"intro-programacion",tipo:"final"}] },
-  { id:"sistemas-representacion", nombre:"Sistemas de Representación", anio:"Segundo año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"intro-programacion",tipo:"regular"}], correlativasFinal:[{id:"intro-programacion",tipo:"final"}] },
+  { id:"calculo-ii", codigo:"35-09", nombre:"Cálculo II", anio:"Segundo año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"algebra-lineal",tipo:"regular"},{id:"calculo-i",tipo:"regular"}], correlativasFinal:[{id:"algebra-lineal",tipo:"final"},{id:"calculo-i",tipo:"final"}] },
+  { id:"fisica-i", codigo:"35-10", nombre:"Física I", anio:"Segundo año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"intro-analisis",tipo:"regular"}], correlativasFinal:[{id:"intro-analisis",tipo:"final"}] },
+  { id:"algoritmos-ii", codigo:"35-11", nombre:"Algoritmos y Estructuras de Datos II", anio:"Segundo año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"algoritmos-i",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-i",tipo:"final"}] },
+  { id:"sistemas-info-i", codigo:"35-12", nombre:"Sistemas de Información I", anio:"Segundo año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"intro-programacion",tipo:"regular"}], correlativasFinal:[{id:"intro-programacion",tipo:"final"}] },
+  { id:"sistemas-representacion", codigo:"35-60", nombre:"Sistemas de Representación", anio:"Segundo año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"intro-programacion",tipo:"regular"}], correlativasFinal:[{id:"intro-programacion",tipo:"final"}] },
 
-  { id:"fisica-ii", nombre:"Física II", anio:"Segundo año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"fisica-i",tipo:"regular"}], correlativasFinal:[{id:"intro-analisis",tipo:"aprobada"},{id:"fisica-i",tipo:"final"}] },
-  { id:"paradigmas", nombre:"Paradigmas de Programación", anio:"Segundo año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"algoritmos-ii",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-i",tipo:"aprobada"},{id:"algoritmos-ii",tipo:"final"}] },
-  { id:"sistemas-info-ii", nombre:"Sistemas de Información II", anio:"Segundo año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"sistemas-info-i",tipo:"regular"}], correlativasFinal:[{id:"intro-programacion",tipo:"aprobada"},{id:"sistemas-info-i",tipo:"final"}] },
-  { id:"probabilidad", nombre:"Probabilidad y Estadística", anio:"Segundo año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"calculo-ii",tipo:"regular"}], correlativasFinal:[{id:"algebra-lineal",tipo:"aprobada"},{id:"calculo-i",tipo:"aprobada"},{id:"calculo-ii",tipo:"final"}] },
-  { id:"bases-datos", nombre:"Bases de Datos", anio:"Segundo año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"algoritmos-ii",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-i",tipo:"aprobada"},{id:"algoritmos-ii",tipo:"final"}] },
+  { id:"fisica-ii", codigo:"35-13", nombre:"Física II", anio:"Segundo año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"fisica-i",tipo:"regular"}], correlativasFinal:[{id:"intro-analisis",tipo:"aprobada"},{id:"fisica-i",tipo:"final"}] },
+  { id:"paradigmas", codigo:"35-14", nombre:"Paradigmas de Programación", anio:"Segundo año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"algoritmos-ii",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-i",tipo:"aprobada"},{id:"algoritmos-ii",tipo:"final"}] },
+  { id:"sistemas-info-ii", codigo:"35-15", nombre:"Sistemas de Información II", anio:"Segundo año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"sistemas-info-i",tipo:"regular"}], correlativasFinal:[{id:"intro-programacion",tipo:"aprobada"},{id:"sistemas-info-i",tipo:"final"}] },
+  { id:"probabilidad", codigo:"35-16", nombre:"Probabilidad y Estadística", anio:"Segundo año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"calculo-ii",tipo:"regular"}], correlativasFinal:[{id:"algebra-lineal",tipo:"aprobada"},{id:"calculo-i",tipo:"aprobada"},{id:"calculo-ii",tipo:"final"}] },
+  { id:"bases-datos", codigo:"35-17", nombre:"Bases de Datos", anio:"Segundo año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"algoritmos-ii",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-i",tipo:"aprobada"},{id:"algoritmos-ii",tipo:"final"}] },
 
   // TERCER AÑO
-  { id:"ing-software-i", nombre:"Ingeniería de Software I", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"sistemas-info-ii",tipo:"regular"},{id:"bases-datos",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-ii",tipo:"aprobada"},{id:"sistemas-info-ii",tipo:"final"},{id:"bases-datos",tipo:"final"}] },
-  { id:"sistemas-operativos", nombre:"Sistemas Operativos", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"algoritmos-ii",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-i",tipo:"aprobada"},{id:"arquitectura",tipo:"aprobada"},{id:"algoritmos-ii",tipo:"final"}] },
-  { id:"redes", nombre:"Redes", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"paradigmas",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-ii",tipo:"aprobada"},{id:"paradigmas",tipo:"final"}] },
+  { id:"ing-software-i", codigo:"35-18", nombre:"Ingeniería de Software I", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"sistemas-info-ii",tipo:"regular"},{id:"bases-datos",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-ii",tipo:"aprobada"},{id:"sistemas-info-ii",tipo:"final"},{id:"bases-datos",tipo:"final"}] },
+  { id:"sistemas-operativos", codigo:"35-19", nombre:"Sistemas Operativos", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"algoritmos-ii",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-i",tipo:"aprobada"},{id:"arquitectura",tipo:"aprobada"},{id:"algoritmos-ii",tipo:"final"}] },
+  { id:"redes", codigo:"35-20", nombre:"Redes", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"paradigmas",tipo:"regular"}], correlativasFinal:[{id:"algoritmos-ii",tipo:"aprobada"},{id:"paradigmas",tipo:"final"}] },
 
-  { id:"organizacion-empresarial", nombre:"Organización Empresarial", anio:"Tercer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"sistemas-info-ii",tipo:"regular"},{id:"probabilidad",tipo:"regular"}], correlativasFinal:[{id:"calculo-ii",tipo:"aprobada"},{id:"sistemas-info-i",tipo:"aprobada"},{id:"sistemas-info-ii",tipo:"final"},{id:"probabilidad",tipo:"final"}] },
-  { id:"analisis-algoritmos", nombre:"Análisis y Diseño de Algoritmos", anio:"Tercer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"paradigmas",tipo:"regular"},{id:"probabilidad",tipo:"regular"}], correlativasFinal:[{id:"calculo-ii",tipo:"aprobada"},{id:"algoritmos-ii",tipo:"aprobada"},{id:"paradigmas",tipo:"final"},{id:"probabilidad",tipo:"final"}] },
-  { id:"ing-software-ii", nombre:"Ingeniería de Software II", anio:"Tercer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"ing-software-i",tipo:"regular"}], correlativasFinal:[{id:"sistemas-info-ii",tipo:"aprobada"},{id:"bases-datos",tipo:"aprobada"},{id:"ing-software-i",tipo:"final"}] },
-  { id:"programacion-web", nombre:"Programación Web", anio:"Tercer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"ing-software-i",tipo:"regular"},{id:"redes",tipo:"regular"}], correlativasFinal:[{id:"paradigmas",tipo:"aprobada"},{id:"bases-datos",tipo:"aprobada"},{id:"ing-software-i",tipo:"final"},{id:"redes",tipo:"final"}] },
-  { id:"etica", nombre:"Ética y Habilitación Profesional", anio:"Tercer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"ing-software-i",tipo:"regular"}], correlativasFinal:[{id:"calculo-ii",tipo:"aprobada"},{id:"ing-software-i",tipo:"final"}] },
+  { id:"organizacion-empresarial", codigo:"35-23", nombre:"Organización Empresarial", anio:"Tercer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"sistemas-info-ii",tipo:"regular"},{id:"probabilidad",tipo:"regular"}], correlativasFinal:[{id:"calculo-ii",tipo:"aprobada"},{id:"sistemas-info-i",tipo:"aprobada"},{id:"sistemas-info-ii",tipo:"final"},{id:"probabilidad",tipo:"final"}] },
+  { id:"analisis-algoritmos", codigo:"35-24", nombre:"Análisis y Diseño de Algoritmos", anio:"Tercer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"paradigmas",tipo:"regular"},{id:"probabilidad",tipo:"regular"}], correlativasFinal:[{id:"calculo-ii",tipo:"aprobada"},{id:"algoritmos-ii",tipo:"aprobada"},{id:"paradigmas",tipo:"final"},{id:"probabilidad",tipo:"final"}] },
+  { id:"ing-software-ii", codigo:"35-25", nombre:"Ingeniería de Software II", anio:"Tercer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"ing-software-i",tipo:"regular"}], correlativasFinal:[{id:"sistemas-info-ii",tipo:"aprobada"},{id:"bases-datos",tipo:"aprobada"},{id:"ing-software-i",tipo:"final"}] },
+  { id:"programacion-web", codigo:"35-26", nombre:"Programación Web", anio:"Tercer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"ing-software-i",tipo:"regular"},{id:"redes",tipo:"regular"}], correlativasFinal:[{id:"paradigmas",tipo:"aprobada"},{id:"bases-datos",tipo:"aprobada"},{id:"ing-software-i",tipo:"final"},{id:"redes",tipo:"final"}] },
+  { id:"etica", codigo:"35-27", nombre:"Ética y Habilitación Profesional", anio:"Tercer año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"ing-software-i",tipo:"regular"}], correlativasFinal:[{id:"calculo-ii",tipo:"aprobada"},{id:"ing-software-i",tipo:"final"}] },
 
   // CUARTO AÑO
-  { id:"reingenieria", nombre:"Reingeniería de Sistemas", anio:"Cuarto año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"ing-software-ii",tipo:"regular"}], correlativasFinal:[{id:"ing-software-i",tipo:"aprobada"},{id:"ing-software-ii",tipo:"final"}] },
-  { id:"gestion-ambiental", nombre:"Gestión Ambiental", anio:"Cuarto año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"etica",tipo:"regular"}], correlativasFinal:[{id:"sistemas-info-ii",tipo:"aprobada"},{id:"fisica-iii",tipo:"aprobada"},{id:"etica",tipo:"final"}] },
-  { id:"investigacion-operativa", nombre:"Investigación Operativa", anio:"Cuarto año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"analisis-algoritmos",tipo:"regular"}], correlativasFinal:[{id:"paradigmas",tipo:"aprobada"},{id:"probabilidad",tipo:"aprobada"},{id:"analisis-algoritmos",tipo:"final"}] },
-  { id:"teoria-computacion", nombre:"Teoría de la Computación", anio:"Cuarto año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"analisis-algoritmos",tipo:"regular"}], correlativasFinal:[{id:"paradigmas",tipo:"aprobada"},{id:"probabilidad",tipo:"aprobada"},{id:"analisis-algoritmos",tipo:"final"}] },
-  { id:"metodos-numericos", nombre:"Métodos Numéricos", anio:"Cuarto año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"paradigmas",tipo:"regular"}], correlativasFinal:[{id:"calculo-ii",tipo:"aprobada"},{id:"algoritmos-ii",tipo:"aprobada"},{id:"paradigmas",tipo:"final"}] },
+  { id:"reingenieria", codigo:"35-28", nombre:"Reingeniería de Sistemas", anio:"Cuarto año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"ing-software-ii",tipo:"regular"}], correlativasFinal:[{id:"ing-software-i",tipo:"aprobada"},{id:"ing-software-ii",tipo:"final"}] },
+  { id:"gestion-ambiental", codigo:"35-29", nombre:"Gestión Ambiental", anio:"Cuarto año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"etica",tipo:"regular"}], correlativasFinal:[{id:"sistemas-info-ii",tipo:"aprobada"},{id:"fisica-iii",tipo:"aprobada"},{id:"etica",tipo:"final"}] },
+  { id:"investigacion-operativa", codigo:"35-30", nombre:"Investigación Operativa", anio:"Cuarto año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"analisis-algoritmos",tipo:"regular"}], correlativasFinal:[{id:"paradigmas",tipo:"aprobada"},{id:"probabilidad",tipo:"aprobada"},{id:"analisis-algoritmos",tipo:"final"}] },
+  { id:"teoria-computacion", codigo:"35-31", nombre:"Teoría de la Computación", anio:"Cuarto año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"analisis-algoritmos",tipo:"regular"}], correlativasFinal:[{id:"paradigmas",tipo:"aprobada"},{id:"probabilidad",tipo:"aprobada"},{id:"analisis-algoritmos",tipo:"final"}] },
+  { id:"metodos-numericos", codigo:"35-32", nombre:"Métodos Numéricos", anio:"Cuarto año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"paradigmas",tipo:"regular"}], correlativasFinal:[{id:"calculo-ii",tipo:"aprobada"},{id:"algoritmos-ii",tipo:"aprobada"},{id:"paradigmas",tipo:"final"}] },
 
-  { id:"inteligencia-artificial", nombre:"Inteligencia Artificial", anio:"Cuarto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"teoria-computacion",tipo:"regular"}], correlativasFinal:[{id:"analisis-algoritmos",tipo:"aprobada"},{id:"teoria-computacion",tipo:"final"}] },
-  { id:"compiladores", nombre:"Compiladores", anio:"Cuarto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"teoria-computacion",tipo:"regular"}], correlativasFinal:[{id:"sistemas-operativos",tipo:"aprobada"},{id:"analisis-algoritmos",tipo:"aprobada"},{id:"teoria-computacion",tipo:"final"}] },
-  { id:"modelos-simulacion", nombre:"Modelos y Simulación", anio:"Cuarto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"analisis-algoritmos",tipo:"regular"}], correlativasFinal:[{id:"probabilidad",tipo:"aprobada"},{id:"ing-software-ii",tipo:"aprobada"},{id:"analisis-algoritmos",tipo:"final"}] },
+  { id:"inteligencia-artificial", codigo:"35-33", nombre:"Inteligencia Artificial", anio:"Cuarto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"teoria-computacion",tipo:"regular"}], correlativasFinal:[{id:"analisis-algoritmos",tipo:"aprobada"},{id:"teoria-computacion",tipo:"final"}] },
+  { id:"compiladores", codigo:"35-34", nombre:"Compiladores", anio:"Cuarto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"teoria-computacion",tipo:"regular"}], correlativasFinal:[{id:"sistemas-operativos",tipo:"aprobada"},{id:"analisis-algoritmos",tipo:"aprobada"},{id:"teoria-computacion",tipo:"final"}] },
+  { id:"modelos-simulacion", codigo:"35-35", nombre:"Modelos y Simulación", anio:"Cuarto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"analisis-algoritmos",tipo:"regular"}], correlativasFinal:[{id:"probabilidad",tipo:"aprobada"},{id:"ing-software-ii",tipo:"aprobada"},{id:"analisis-algoritmos",tipo:"final"}] },
 
   // QUINTO AÑO
-  { id:"elementos-economia", nombre:"Elementos de Economía", anio:"Quinto año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"organizacion-empresarial",tipo:"regular"}], correlativasFinal:[{id:"sistemas-info-ii",tipo:"aprobada"},{id:"probabilidad",tipo:"aprobada"},{id:"organizacion-empresarial",tipo:"final"}] },
-  { id:"sistemas-distribuidos", nombre:"Sistemas Distribuidos y Paralelos", anio:"Quinto año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"ing-software-ii",tipo:"regular"}], correlativasFinal:[{id:"redes",tipo:"aprobada"},{id:"ing-software-ii",tipo:"final"}] },
+  { id:"elementos-economia", codigo:"35-36", nombre:"Elementos de Economía", anio:"Quinto año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"organizacion-empresarial",tipo:"regular"}], correlativasFinal:[{id:"sistemas-info-ii",tipo:"aprobada"},{id:"probabilidad",tipo:"aprobada"},{id:"organizacion-empresarial",tipo:"final"}] },
+  { id:"sistemas-distribuidos", codigo:"35-37", nombre:"Sistemas Distribuidos y Paralelos", anio:"Quinto año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"ing-software-ii",tipo:"regular"}], correlativasFinal:[{id:"redes",tipo:"aprobada"},{id:"ing-software-ii",tipo:"final"}] },
 
-  { id:"auditoria", nombre:"Auditoría y Peritaje de Sistemas", anio:"Quinto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"reingenieria",tipo:"regular"}], correlativasFinal:[{id:"ing-software-ii",tipo:"aprobada"},{id:"reingenieria",tipo:"final"}] },
-  { id:"bases-datos-avanzadas", nombre:"Base de Datos Avanzadas", alias:["Bases de Datos Avanzadas"], anio:"Quinto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"sistemas-distribuidos",tipo:"regular"}], correlativasFinal:[{id:"bases-datos",tipo:"aprobada"},{id:"sistemas-distribuidos",tipo:"final"}] },
-  { id:"optativa-1", nombre:"Optativa 1", anio:"Quinto año", periodo:"2do cuatrimestre", correlativasCursado:[], correlativasFinal:[], notas:["El documento indica que los requisitos dependen de la optativa elegida."] },
-  { id:"optativa-2", nombre:"Optativa 2", anio:"Quinto año", periodo:"2do cuatrimestre", correlativasCursado:[], correlativasFinal:[], notas:["El documento indica que los requisitos dependen de la optativa elegida."] },
-  { id:"bioinformatica", nombre:"Bioinformática", anio:"Quinto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"modelos-simulacion",tipo:"regular"},{id:"sistemas-distribuidos",tipo:"regular"}], correlativasFinal:[{id:"teoria-computacion",tipo:"aprobada"},{id:"modelos-simulacion",tipo:"final"},{id:"sistemas-distribuidos",tipo:"final"}] },
+  { id:"auditoria", codigo:"35-38", nombre:"Auditoría y Peritaje de Sistemas", anio:"Quinto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"reingenieria",tipo:"regular"}], correlativasFinal:[{id:"ing-software-ii",tipo:"aprobada"},{id:"reingenieria",tipo:"final"}] },
+  { id:"bases-datos-avanzadas", codigo:"35-39", nombre:"Base de Datos Avanzadas", alias:["Bases de Datos Avanzadas"], anio:"Quinto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"sistemas-distribuidos",tipo:"regular"}], correlativasFinal:[{id:"bases-datos",tipo:"aprobada"},{id:"sistemas-distribuidos",tipo:"final"}] },
+  { id:"optativa-1", codigo:"35-40", nombre:"Optativa 1", anio:"Quinto año", periodo:"2do cuatrimestre", correlativasCursado:[], correlativasFinal:[], notas:["El documento indica que los requisitos dependen de la optativa elegida."] },
+  { id:"optativa-2", codigo:"35-41", nombre:"Optativa 2", anio:"Quinto año", periodo:"2do cuatrimestre", correlativasCursado:[], correlativasFinal:[], notas:["El documento indica que los requisitos dependen de la optativa elegida."] },
+  { id:"bioinformatica", codigo:"35-42", nombre:"Bioinformática", anio:"Quinto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"modelos-simulacion",tipo:"regular"},{id:"sistemas-distribuidos",tipo:"regular"}], correlativasFinal:[{id:"teoria-computacion",tipo:"aprobada"},{id:"modelos-simulacion",tipo:"final"},{id:"sistemas-distribuidos",tipo:"final"}] },
 
   // Materias finales y práctica
-  { id:"practica-profesional", nombre:"Práctica Profesional Supervisada", anio:"Quinto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"__nota80",tipo:"nota"}], correlativasFinal:[{id:"__nota80",tipo:"nota"}], notas:["Según el documento, para comenzar la Práctica Profesional Supervisada debe estar aprobado el 80 % de las asignaturas del plan. La condición aparece como Nota 1."] },
-  { id:"proyecto-final", nombre:"Proyecto Final", anio:"Quinto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"__nota80",tipo:"nota"}], correlativasFinal:[{id:"__nota100",tipo:"nota"}], notas:["Según el documento, para comenzar el Proyecto Final debe estar aprobado el 80 % de las asignaturas; para rendirlo, deben estar aprobadas todas las materias del plan."] },
+  { id:"practica-profesional", codigo:"35-43", nombre:"Práctica Profesional Supervisada", anio:"Quinto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"__nota80",tipo:"nota"}], correlativasFinal:[{id:"__nota80",tipo:"nota"}], notas:["Según el documento, para comenzar la Práctica Profesional Supervisada debe estar aprobado el 80 % de las asignaturas del plan. La condición aparece como Nota 1."] },
+  { id:"proyecto-final", codigo:"35-44", nombre:"Proyecto Final", anio:"Quinto año", periodo:"2do cuatrimestre", correlativasCursado:[{id:"__nota80",tipo:"nota"}], correlativasFinal:[{id:"__nota100",tipo:"nota"}], notas:["Según el documento, para comenzar el Proyecto Final debe estar aprobado el 80 % de las asignaturas; para rendirlo, deben estar aprobadas todas las materias del plan."] },
 
   // OPTATIVAS listadas en el documento
-  { id:"opt-teoria-informacion", nombre:"Teoría de la Información", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"sistemas-info-ii",tipo:"aprobada"},{id:"probabilidad",tipo:"aprobada"}] },
-  { id:"opt-computacion-grafica", nombre:"Computación Gráfica", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[{id:"metodos-numericos",tipo:"regular"}], correlativasFinal:[{id:"analisis-algoritmos",tipo:"aprobada"},{id:"metodos-numericos",tipo:"final"}] },
-  { id:"opt-semantica", nombre:"Semántica de los Lenguajes de Programación", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"teoria-computacion",tipo:"aprobada"}] },
-  { id:"opt-analisis-estatico", nombre:"Análisis Estático de Programas", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[{id:"compiladores",tipo:"regular"}], correlativasFinal:[{id:"teoria-computacion",tipo:"aprobada"},{id:"compiladores",tipo:"final"}] },
-  { id:"opt-verificacion-validacion", nombre:"Verificación y Validación de Software", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[{id:"sistemas-distribuidos",tipo:"regular"}], correlativasFinal:[{id:"analisis-algoritmos",tipo:"aprobada"},{id:"sistemas-distribuidos",tipo:"final"}] },
-  { id:"opt-comunicacion", nombre:"Comunicación Oral y Escrita", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[] },
-  { id:"opt-senales", nombre:"Análisis y Procesamiento de Señales", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"calculo-ii",tipo:"aprobada"}] },
-  { id:"opt-metodologia", nombre:"Metodología de la Investigación", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[] },
-  { id:"opt-electronica", nombre:"Electrónica Digital", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"arquitectura",tipo:"aprobada"}] },
-  { id:"opt-sistemas-control", nombre:"Sistemas de Control", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[{id:"modelos-simulacion",tipo:"regular"}], correlativasFinal:[{id:"analisis-algoritmos",tipo:"aprobada"},{id:"modelos-simulacion",tipo:"final"}] },
-  { id:"opt-gestion-calidad", nombre:"Gestión de Calidad", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"reingenieria",tipo:"aprobada"}] },
-  { id:"opt-financiamiento", nombre:"Financiamiento de Proyectos en Internet", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"reingenieria",tipo:"aprobada"}] },
-  { id:"opt-costos", nombre:"Sistemas de Costos y Presupuestos", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"organizacion-empresarial",tipo:"aprobada"}] },
-  { id:"opt-sig", nombre:"Sistemas de Información Geográfica", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"analisis-algoritmos",tipo:"aprobada"},{id:"gestion-ambiental",tipo:"aprobada"}] },
-  { id:"opt-gestion-procesos", nombre:"Gestión de Procesos", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"organizacion-empresarial",tipo:"aprobada"},{id:"ing-software-ii",tipo:"aprobada"}] },
+  { id:"opt-teoria-informacion", codigo:"35-45", nombre:"Teoría de la Información", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"sistemas-info-ii",tipo:"aprobada"},{id:"probabilidad",tipo:"aprobada"}] },
+  { id:"opt-computacion-grafica", codigo:"35-46", nombre:"Computación Gráfica", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[{id:"metodos-numericos",tipo:"regular"}], correlativasFinal:[{id:"analisis-algoritmos",tipo:"aprobada"},{id:"metodos-numericos",tipo:"final"}] },
+  { id:"opt-semantica", codigo:"35-47", nombre:"Semántica de los Lenguajes de Programación", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"teoria-computacion",tipo:"aprobada"}] },
+  { id:"opt-analisis-estatico", codigo:"35-48", nombre:"Análisis Estático de Programas", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[{id:"compiladores",tipo:"regular"}], correlativasFinal:[{id:"teoria-computacion",tipo:"aprobada"},{id:"compiladores",tipo:"final"}] },
+  { id:"opt-verificacion-validacion", codigo:"35-49", nombre:"Verificación y Validación de Software", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[{id:"sistemas-distribuidos",tipo:"regular"}], correlativasFinal:[{id:"analisis-algoritmos",tipo:"aprobada"},{id:"sistemas-distribuidos",tipo:"final"}] },
+  { id:"opt-comunicacion", codigo:"35-50", nombre:"Comunicación Oral y Escrita", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[] },
+  { id:"opt-senales", codigo:"35-51", nombre:"Análisis y Procesamiento de Señales", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"calculo-ii",tipo:"aprobada"}] },
+  { id:"opt-metodologia", codigo:"35-52", nombre:"Metodología de la Investigación", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[] },
+  { id:"opt-electronica", codigo:"35-53", nombre:"Electrónica Digital", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"arquitectura",tipo:"aprobada"}] },
+  { id:"opt-sistemas-control", codigo:"35-54", nombre:"Sistemas de Control", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[{id:"modelos-simulacion",tipo:"regular"}], correlativasFinal:[{id:"analisis-algoritmos",tipo:"aprobada"},{id:"modelos-simulacion",tipo:"final"}] },
+  { id:"opt-gestion-calidad", codigo:"35-55", nombre:"Gestión de Calidad", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"reingenieria",tipo:"aprobada"}] },
+  { id:"opt-financiamiento", codigo:"35-56", nombre:"Financiamiento de Proyectos en Internet", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"reingenieria",tipo:"aprobada"}] },
+  { id:"opt-costos", codigo:"35-57", nombre:"Sistemas de Costos y Presupuestos", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"organizacion-empresarial",tipo:"aprobada"}] },
+  { id:"opt-sig", codigo:"35-58", nombre:"Sistemas de Información Geográfica", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"analisis-algoritmos",tipo:"aprobada"},{id:"gestion-ambiental",tipo:"aprobada"}] },
+  { id:"opt-gestion-procesos", codigo:"35-59", nombre:"Gestión de Procesos", anio:"Materias optativas", periodo:"Optativa", correlativasCursado:[], correlativasFinal:[{id:"organizacion-empresarial",tipo:"aprobada"},{id:"ing-software-ii",tipo:"aprobada"}] },
 
-  { id:"fisica-iii", nombre:"Física III", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"fisica-ii",tipo:"regular"}], correlativasFinal:[{id:"quimica",tipo:"aprobada"},{id:"fisica-i",tipo:"aprobada"}, {id:"fisica-ii",tipo:"final"}] },
-  { id:"ingles", nombre:"Inglés", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasFinal:[] }
+  { id:"fisica-iii", codigo:"35-21", nombre:"Física III", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[{id:"fisica-ii",tipo:"regular"}], correlativasFinal:[{id:"quimica",tipo:"aprobada"},{id:"fisica-i",tipo:"aprobada"}, {id:"fisica-ii",tipo:"final"}] },
+  { id:"ingles", codigo:"35-22", nombre:"Inglés", anio:"Tercer año", periodo:"1er cuatrimestre", correlativasCursado:[], correlativasFinal:[] }
 ];
 
 
@@ -97,7 +97,7 @@ const relations = {
   "arquitectura": { regular:[["intro-programacion","regular"]], approved:[], final:[["intro-programacion","final"]] },
   "calculo-ii": { regular:[["algebra-lineal","regular"],["calculo-i","regular"]], approved:[["mat-discreta","aprobada"]], final:[["algebra-lineal","final"],["calculo-i","final"]] },
   "fisica-i": { regular:[["intro-analisis","regular"]], approved:[], final:[["intro-analisis","final"]] },
-  "algoritmos-ii": { regular:[["algoritmos-i","regular"]], approved:[], final:[["algoritmos-i","final"]] },
+  "algoritmos-ii": { regular:[["algoritmos-i","regular"]], approved:[["intro-programacion","aprobada"]], final:[["algoritmos-i","final"]] },
   "sistemas-info-i": { regular:[["intro-programacion","regular"]], approved:[], final:[["intro-programacion","final"]] },
   "sistemas-representacion": { regular:[["intro-programacion","regular"]], approved:[], final:[["intro-programacion","final"]] },
   "fisica-ii": { regular:[["fisica-i","regular"]], approved:[["intro-analisis","aprobada"]], final:[["fisica-i","final"]] },
@@ -152,9 +152,9 @@ for (const [id, r] of Object.entries(relations)) {
   subject.correlativasFinal = r.final.map(([rid,tipo]) => ({id:rid,tipo}));
 }
 
-const sectionOrder = ["Ingreso","Primer año","Segundo año","Tercer año","Cuarto año","Quinto año","Materias optativas","Materias por completar"];
+const sectionOrder = ["Ingreso","Primer año","Segundo año","Tercer año","Cuarto año","Quinto año","Materias optativas"];
 const subjectById = new Map(subjects.map(s => [s.id, s]));
-const state = { section: "Ingreso", openIds: new Set(), graphSubjectId: null, returnSection: "Ingreso" };
+const state = { section: "Ingreso", openIds: new Set() };
 
 const el = id => document.getElementById(id);
 const normalize = value => String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es").trim();
@@ -217,7 +217,6 @@ function cardHTML(s, index) {
         <span class="subject-title-wrap"><span class="subject-name">${safe(s.nombre)}</span><span class="subject-meta">${safe(s.periodo || s.anio)}${s.codigo ? " · Código " + safe(s.codigo) : ""}</span></span>
         <span class="chevron" aria-hidden="true">⌄</span>
       </button>
-      <button class="graph-button" type="button" data-open-graph="${safe(s.id)}">Ver recorrido ↗</button>
     </div>
     <div class="subject-details" id="details-${safe(s.id)}" ${isOpen ? "" : "hidden"}>
       <div class="detail-columns">
@@ -248,7 +247,6 @@ function renderSubjects() {
     renderSubjects();
   }));
   el("subject-list").querySelectorAll("[data-open-subject]").forEach(btn => btn.addEventListener("click", () => openSubject(btn.dataset.openSubject)));
-  el("subject-list").querySelectorAll("[data-open-graph]").forEach(btn => btn.addEventListener("click", () => showGraph(btn.dataset.openGraph)));
 }
 function openSubject(id) {
   const subject = subjectById.get(id);
@@ -265,6 +263,18 @@ function openSubject(id) {
 function searchSubjects(query) {
   const q = normalize(query);
   if (!q) return [];
+  // Si la consulta son solo números/guiones (ej. "35-07", "3507", "7"), se busca por código.
+  const digits = q.replace(/\D/g, "");
+  const isCodeQuery = digits.length > 0 && /^[\d\s\-–—./]+$/.test(q);
+  if (isCodeQuery) {
+    return subjects.filter(s => {
+      if (!s.codigo) return false;
+      const code = s.codigo.replace(/\D/g, "");          // "35-07" -> "3507"
+      return digits.length <= 2
+        ? code.slice(2) === digits.padStart(2, "0")      // "7" o "07" -> 35-07
+        : code.startsWith(digits);                       // "3507", "350", "35-1"...
+    }).sort((a,b) => a.codigo.localeCompare(b.codigo));
+  }
   return subjects.filter(s => normalize([s.nombre, ...(s.alias || []), s.codigo || ""].join(" ")).includes(q))
     .sort((a,b) => sectionOrder.indexOf(a.anio)-sectionOrder.indexOf(b.anio) || a.nombre.localeCompare(b.nombre, "es"));
 }
@@ -275,76 +285,12 @@ function renderSearch() {
   const matches = searchSubjects(query);
   const groups = sectionOrder.map(section => ({section, items:matches.filter(s => s.anio === section)})).filter(g => g.items.length);
   el("search-results").hidden = false;
-  el("search-results").innerHTML = matches.length ? groups.map(g => `<div class="search-group-title">${safe(sectionLabel(g.section))}</div>${g.items.map(s => `<button type="button" class="search-result" data-search-open="${safe(s.id)}"><span class="result-icon">↗</span><span><span class="result-name">${safe(s.nombre)}</span><span class="result-meta">${safe(s.anio)} · ${safe(s.periodo || "")}</span></span></button>`).join("")}`).join("") : `<div class="empty-state">No se encontraron materias para “${safe(query)}”.</div>`;
+  el("search-results").innerHTML = matches.length ? groups.map(g => `<div class="search-group-title">${safe(sectionLabel(g.section))}</div>${g.items.map(s => `<button type="button" class="search-result" data-search-open="${safe(s.id)}"><span class="result-icon">↗</span><span><span class="result-name">${safe(s.nombre)}</span><span class="result-meta">${s.codigo ? "Cód. " + safe(s.codigo) + " · " : ""}${safe(s.anio)} · ${safe(s.periodo || "")}</span></span></button>`).join("")}`).join("") : `<div class="empty-state">No se encontraron materias para “${safe(query)}”.</div>`;
   el("search-results").querySelectorAll("[data-search-open]").forEach(btn => btn.addEventListener("click", () => {
     openSubject(btn.dataset.searchOpen);
     el("global-search").value = "";
     renderSearch();
   }));
-}
-function getRelationTypesForPair(sourceId, targetId) {
-  const target = subjectById.get(targetId);
-  if (!target) return [];
-  const rels = [];
-  (target.correlativasIngreso || []).filter(r => r.id === sourceId).forEach(r => rels.push(r.tipo));
-  (target.correlativasCursado || []).filter(r => r.id === sourceId).forEach(r => rels.push(r.tipo));
-  (target.correlativasAprobadasCursar || []).filter(r => r.id === sourceId).forEach(r => rels.push(r.tipo));
-  (target.correlativasFinal || []).filter(r => r.id === sourceId).forEach(r => rels.push(r.tipo));
-  return [...new Set(rels)];
-}
-function showGraph(id) {
-  const subject = subjectById.get(id);
-  if (!subject) return;
-  state.graphSubjectId = id;
-  state.returnSection = state.section;
-  el("content-grid").hidden = true;
-  el("year-tabs").hidden = true;
-  el("section-heading").hidden = true;
-  el("data-notice").hidden = true;
-  el("subject-list").hidden = true;
-  el("graph-view").hidden = false;
-  el("graph-title").textContent = subject.nombre;
-  el("graph-description").textContent = `${subject.anio}${subject.periodo ? " · " + subject.periodo : ""}. Seleccioná cualquier nodo para explorar sus relaciones.`;
-  const prerequisites = [];
-  const addReq = (req, type) => {
-    const target = subjectById.get(req.id);
-    if (!target) {
-      if (req.tipo === "nota") prerequisites.push({target:null, label:getRequirementInfo(req).label, type:"pending"});
-      return;
-    }
-    prerequisites.push({target, label:target.nombre, type:req.tipo === "ingreso" ? "ingreso" : req.tipo === "regular" ? "regular" : req.tipo === "aprobada" ? "approved" : req.tipo === "final" ? "final" : "pending", group:type});
-  };
-  (subject.correlativasIngreso || []).forEach(r => addReq(r,"ingreso"));
-  (subject.correlativasCursado || []).forEach(r => addReq(r,"cursado"));
-  (subject.correlativasAprobadasCursar || []).forEach(r => addReq(r,"aprobada-cursar"));
-  (subject.correlativasFinal || []).forEach(r => addReq(r,"final"));
-  const seen = new Set();
-  const uniqueReqs = prerequisites.filter(r => { const key = (r.target ? r.target.id : r.label) + "|" + r.type; if(seen.has(key)) return false; seen.add(key); return true; });
-  const deps = uniqueDependents(id);
-  const node = (s, cls="", subtitle="") => `<button class="graph-node ${cls}" type="button" data-graph-node="${s ? safe(s.id) : ""}" ${s ? "" : "disabled"}><strong>${safe(s ? s.nombre : subtitle)}</strong><small>${safe(s ? s.anio + (s.periodo ? " · " + s.periodo : "") : "Condición general del plan")}</small></button>`;
-  const reqHTML = uniqueReqs.length ? uniqueReqs.map(r => r.target ? node(r.target, `requirement ${r.type === "approved" ? "approved" : r.type === "final" ? "final" : r.type === "regular" ? "regular" : r.type === "ingreso" ? "ingreso" : "pending"}`, r.type) : node(null,"requirement pending",r.label)).join("") : `<div class="empty-state">No hay requisitos previos registrados.</div>`;
-  const depsHTML = deps.length ? deps.map(d => node(d,"dependent")).join("") : `<div class="empty-state">No hay materias dependientes registradas.</div>`;
-  el("graph-canvas").innerHTML = `<div class="graph-layout">
-    <div class="graph-lane"><div class="graph-lane-label">Requisitos previos</div>${reqHTML}</div>
-    <div class="graph-arrow" aria-hidden="true">→</div>
-    <div class="graph-lane"><div class="graph-lane-label">Materia seleccionada</div>${node(subject,"focus")}</div>
-    <div class="graph-arrow" aria-hidden="true">→</div>
-    <div class="graph-lane"><div class="graph-lane-label">Materias dependientes</div>${depsHTML}</div>
-  </div>`;
-  el("graph-canvas").querySelectorAll("[data-graph-node]").forEach(btn => {
-    if (btn.dataset.graphNode) btn.addEventListener("click", () => showGraph(btn.dataset.graphNode));
-  });
-  window.scrollTo({top:0,behavior:"smooth"});
-}
-function closeGraph() {
-  el("graph-view").hidden = true;
-  el("content-grid").hidden = false;
-  el("year-tabs").hidden = false;
-  el("section-heading").hidden = false;
-  el("data-notice").hidden = state.section !== "Ingreso";
-  el("subject-list").hidden = false;
-  state.section = subjectById.get(state.graphSubjectId)?.anio || state.returnSection || "Ingreso";
-  renderTabs(); renderSubjects();
 }
 function initTheme() {
   const stored = localStorage.getItem("malla-theme");
@@ -362,9 +308,8 @@ function applyTheme(theme) {
 el("theme-toggle").addEventListener("click", () => applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark"));
 el("global-search").addEventListener("input", renderSearch);
 el("clear-search").addEventListener("click", () => { el("global-search").value = ""; renderSearch(); el("global-search").focus(); });
-el("back-to-grid").addEventListener("click", closeGraph);
 document.addEventListener("keydown", event => {
-  if (event.key === "Escape") { el("search-results").hidden = true; if (!el("graph-view").hidden) closeGraph(); }
+  if (event.key === "Escape") el("search-results").hidden = true;
 });
 
 // Validación básica para detectar errores de IDs o relaciones rotas al ampliar los datos.

@@ -218,7 +218,8 @@ function cardHTML(s, index) {
         <span class="chevron" aria-hidden="true">⌄</span>
       </button>
     </div>
-    <div class="subject-details" id="details-${safe(s.id)}" ${isOpen ? "" : "hidden"}>
+    <div class="subject-details" id="details-${safe(s.id)}" ${isOpen ? "" : "inert"}>
+      <div class="subject-details-inner">
       <div class="detail-columns">
         <section class="requirement-group ingreso"><div class="requirement-heading">Requisitos del ingreso</div>${requirementList(s.correlativasIngreso || [], "Sin requisitos de ingreso registrados.")}</section>
         <section class="requirement-group cursado"><div class="requirement-heading">Regulares para cursar</div>${requirementList(s.correlativasCursado, "Sin correlativas registradas para esta condición.")}</section>
@@ -227,8 +228,27 @@ function cardHTML(s, index) {
         <section class="requirement-group full"><div class="requirement-heading">Materias que la tienen como correlativa</div>${deps.length ? `<ul class="requirement-list">${deps.map(d => `<li class="requirement-item"><button class="subject-link" type="button" data-open-subject="${safe(d.id)}">${safe(d.nombre)}</button><span class="condition-tag">${safe(d.anio)}</span></li>`).join("")}</ul>` : `<p class="empty-requirement">No hay materias dependientes registradas.</p>`}</section>
       </div>
       ${notes.map(note => `<p class="detail-note">${safe(note)}</p>`).join("")}
+      </div>
     </div>
   </article>`;
+}
+function applyCardState(id, open) {
+  const card = el(`card-${id}`);
+  if (!card) return;
+  card.classList.toggle("is-open", open);
+  card.querySelector("[data-toggle-card]").setAttribute("aria-expanded", String(open));
+  card.querySelector(".subject-details").toggleAttribute("inert", !open);
+}
+// Solo se permite una tarjeta abierta a la vez.
+function setCardOpen(id, open) {
+  if (open) {
+    state.openIds.forEach(other => { if (other !== id) applyCardState(other, false); });
+    state.openIds.clear();
+    state.openIds.add(id);
+  } else {
+    state.openIds.delete(id);
+  }
+  applyCardState(id, open);
 }
 function renderSubjects() {
   const list = subjects.filter(s => s.anio === state.section).sort((a,b) => periodOrder(a.periodo)-periodOrder(b.periodo) || a.nombre.localeCompare(b.nombre, "es"));
@@ -243,8 +263,7 @@ function renderSubjects() {
   el("subject-list").innerHTML = list.length ? list.map(cardHTML).join("") : `<div class="empty-state">No hay materias cargadas en esta sección.</div>`;
   el("subject-list").querySelectorAll("[data-toggle-card]").forEach(btn => btn.addEventListener("click", () => {
     const id = btn.dataset.toggleCard;
-    if (state.openIds.has(id)) state.openIds.delete(id); else state.openIds.add(id);
-    renderSubjects();
+    setCardOpen(id, !state.openIds.has(id));
   }));
   el("subject-list").querySelectorAll("[data-open-subject]").forEach(btn => btn.addEventListener("click", () => openSubject(btn.dataset.openSubject)));
 }
@@ -252,13 +271,13 @@ function openSubject(id) {
   const subject = subjectById.get(id);
   if (!subject) return;
   state.section = subject.anio;
-  state.openIds.add(id);
   el("search-results").hidden = true;
   renderTabs(); renderSubjects();
-  requestAnimationFrame(() => {
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    setCardOpen(id, true);
     const card = el(`card-${id}`);
     if (card) card.scrollIntoView({behavior:"smooth",block:"center"});
-  });
+  }));
 }
 function searchSubjects(query) {
   const q = normalize(query);

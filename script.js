@@ -320,7 +320,7 @@ function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
   const isDark = theme === "dark";
   el("theme-icon").textContent = isDark ? "☼" : "☾";
-  el("theme-label").textContent = isDark ? "Tema claro" : "Tema oscuro";
+  el("theme-label").textContent = isDark ? "" : "";
   el("theme-toggle").setAttribute("aria-label", isDark ? "Cambiar a tema claro" : "Cambiar a tema oscuro");
   localStorage.setItem("malla-theme", theme);
 }
